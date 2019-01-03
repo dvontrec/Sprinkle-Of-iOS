@@ -1,0 +1,6 @@
+framework module Pods_Sprinkle_Of_iOS {
+  umbrella header "Pods-Sprinkle Of iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

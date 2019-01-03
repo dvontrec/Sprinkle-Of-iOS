@@ -12,9 +12,12 @@
 		CE8B4DA921DEC7720059C74C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8B4DA721DEC7720059C74C /* Main.storyboard */; };
 		CE8B4DAB21DEC77A0059C74C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8B4DAA21DEC7790059C74C /* Assets.xcassets */; };
 		CE8B4DAE21DEC77A0059C74C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8B4DAC21DEC77A0059C74C /* LaunchScreen.storyboard */; };
+		EB6986CF5250C2BE801FBAA5 /* Pods_Sprinkle_Of_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89E86DC71204E01262BF1BC /* Pods_Sprinkle_Of_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2097834DC4D7D18B682C2504 /* Pods-Sprinkle Of iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprinkle Of iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sprinkle Of iOS/Pods-Sprinkle Of iOS.release.xcconfig"; sourceTree = "<group>"; };
+		762382B515DE680CF450C802 /* Pods-Sprinkle Of iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprinkle Of iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sprinkle Of iOS/Pods-Sprinkle Of iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CE8B4DA021DEC7720059C74C /* Sprinkle Of iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sprinkle Of iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8B4DA321DEC7720059C74C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8B4DA521DEC7720059C74C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		CE8B4DAA21DEC7790059C74C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8B4DAD21DEC77A0059C74C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8B4DAF21DEC77A0059C74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D89E86DC71204E01262BF1BC /* Pods_Sprinkle_Of_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sprinkle_Of_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6986CF5250C2BE801FBAA5 /* Pods_Sprinkle_Of_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ECBD87EC665FE72D0AB7281 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				762382B515DE680CF450C802 /* Pods-Sprinkle Of iOS.debug.xcconfig */,
+				2097834DC4D7D18B682C2504 /* Pods-Sprinkle Of iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		53C6F3E97B22742B8F66E65F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D89E86DC71204E01262BF1BC /* Pods_Sprinkle_Of_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE8B4D9721DEC7720059C74C = {
 			isa = PBXGroup;
 			children = (
 				CE8B4DA221DEC7720059C74C /* Sprinkle Of iOS */,
 				CE8B4DA121DEC7720059C74C /* Products */,
+				1ECBD87EC665FE72D0AB7281 /* Pods */,
+				53C6F3E97B22742B8F66E65F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE8B4DB221DEC77A0059C74C /* Build configuration list for PBXNativeTarget "Sprinkle Of iOS" */;
 			buildPhases = (
+				F3D88DF18AD49E02362B82BD /* [CP] Check Pods Manifest.lock */,
 				CE8B4D9C21DEC7720059C74C /* Sources */,
 				CE8B4D9D21DEC7720059C74C /* Frameworks */,
 				CE8B4D9E21DEC7720059C74C /* Resources */,
+				947547B08392EED0F2E1C874 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		947547B08392EED0F2E1C874 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sprinkle Of iOS/Pods-Sprinkle Of iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sprinkle Of iOS/Pods-Sprinkle Of iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3D88DF18AD49E02362B82BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sprinkle Of iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE8B4D9C21DEC7720059C74C /* Sources */ = {
@@ -280,11 +355,13 @@
 		};
 		CE8B4DB321DEC77A0059C74C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 762382B515DE680CF450C802 /* Pods-Sprinkle Of iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P474U7DFXB;
 				INFOPLIST_FILE = "Sprinkle Of iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,17 +369,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dvontrecoleman.Sprinkle-Of-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CE8B4DB421DEC77A0059C74C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2097834DC4D7D18B682C2504 /* Pods-Sprinkle Of iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P474U7DFXB;
 				INFOPLIST_FILE = "Sprinkle Of iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dvontrecoleman.Sprinkle-Of-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
