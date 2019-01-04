@@ -62,6 +62,7 @@
                     </view>
                     <connections>
                         <outlet property="quoteLabel" destination="jzf-Gi-rQd" id="tOH-Vr-Kfa"/>
+                        <outlet property="songLabel" destination="N7l-ey-ChW" id="8my-m4-UTh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

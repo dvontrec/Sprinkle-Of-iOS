@@ -14,8 +14,12 @@ class ViewController: UIViewController {
 
     // variable to save the url for the api call
     let url : String = "https://sprinkle-of-jeezy.herokuapp.com/api/quotes"
+    
+    let quoteModel = QuoteModel()
+    
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var songLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -46,16 +50,19 @@ class ViewController: UIViewController {
     func  updateQuoteLabels(json: JSON){
         // If the data has exists
         if let quote = json["quote"].string{
-            quoteLabel.text = quote
-//            print("\(song), by: \(artist)"
+            quoteModel.quote = quote
+            quoteModel.artist = json["artist"].stringValue
+            quoteModel.song = json["song"].stringValue
+            updateUI()
         }else {
             quoteLabel.text = "There seems to be an error, try again later"
+            
         }
-        if let artist = json["artist"].string{
-            print(artist)
-        } else {
-            quoteLabel.text = "There seems to be an error, try again later"
-        }
+    }
+    
+    func updateUI(){
+        quoteLabel.text = quoteModel.quote
+        songLabel.text = "\(quoteModel.song), by: \(quoteModel.artist)"
     }
     
 }
