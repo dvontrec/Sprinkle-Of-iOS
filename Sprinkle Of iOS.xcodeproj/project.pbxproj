@@ -12,6 +12,7 @@
 		CE8B4DA921DEC7720059C74C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8B4DA721DEC7720059C74C /* Main.storyboard */; };
 		CE8B4DAB21DEC77A0059C74C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8B4DAA21DEC7790059C74C /* Assets.xcassets */; };
 		CE8B4DAE21DEC77A0059C74C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8B4DAC21DEC77A0059C74C /* LaunchScreen.storyboard */; };
+		CE8B4DBA21DED9680059C74C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8B4DB921DED9680059C74C /* Default-568h@2x.png */; };
 		EB6986CF5250C2BE801FBAA5 /* Pods_Sprinkle_Of_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89E86DC71204E01262BF1BC /* Pods_Sprinkle_Of_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		CE8B4DAA21DEC7790059C74C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8B4DAD21DEC77A0059C74C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8B4DAF21DEC77A0059C74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE8B4DB921DED9680059C74C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D89E86DC71204E01262BF1BC /* Pods_Sprinkle_Of_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sprinkle_Of_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 		CE8B4D9721DEC7720059C74C = {
 			isa = PBXGroup;
 			children = (
+				CE8B4DB921DED9680059C74C /* Default-568h@2x.png */,
 				CE8B4DA221DEC7720059C74C /* Sprinkle Of iOS */,
 				CE8B4DA121DEC7720059C74C /* Products */,
 				1ECBD87EC665FE72D0AB7281 /* Pods */,
@@ -78,14 +81,46 @@
 		CE8B4DA221DEC7720059C74C /* Sprinkle Of iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CE8B4DA321DEC7720059C74C /* AppDelegate.swift */,
-				CE8B4DA521DEC7720059C74C /* ViewController.swift */,
-				CE8B4DA721DEC7720059C74C /* Main.storyboard */,
+				CE8B4DB521DECB010059C74C /* Model */,
+				CE8B4DB621DECB120059C74C /* View */,
+				CE8B4DB721DECB190059C74C /* Controller */,
 				CE8B4DAA21DEC7790059C74C /* Assets.xcassets */,
-				CE8B4DAC21DEC77A0059C74C /* LaunchScreen.storyboard */,
 				CE8B4DAF21DEC77A0059C74C /* Info.plist */,
+				CE8B4DB821DECBFC0059C74C /* Supporting files */,
 			);
 			path = "Sprinkle Of iOS";
+			sourceTree = "<group>";
+		};
+		CE8B4DB521DECB010059C74C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE8B4DB621DECB120059C74C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE8B4DAC21DEC77A0059C74C /* LaunchScreen.storyboard */,
+				CE8B4DA721DEC7720059C74C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE8B4DB721DECB190059C74C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE8B4DA321DEC7720059C74C /* AppDelegate.swift */,
+				CE8B4DA521DEC7720059C74C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE8B4DB821DECBFC0059C74C /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8B4DAE21DEC77A0059C74C /* LaunchScreen.storyboard in Resources */,
+				CE8B4DBA21DED9680059C74C /* Default-568h@2x.png in Resources */,
 				CE8B4DAB21DEC77A0059C74C /* Assets.xcassets in Resources */,
 				CE8B4DA921DEC7720059C74C /* Main.storyboard in Resources */,
 			);
@@ -361,6 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P474U7DFXB;
 				INFOPLIST_FILE = "Sprinkle Of iOS/Info.plist";
+				"INFOPLIST_FILE[sdk=*]" = "Sprinkle Of iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
