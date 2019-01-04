@@ -8,15 +8,47 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
+    // variable to save the url for the api call
+    let url : String = "https://sprinkle-of-jeezy.herokuapp.com/api/quotes"
+    @IBOutlet weak var quoteLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func getQuoteButtonBressed(_ sender: Any) {
+        // Calls a function to get data from API
+        getApiData()
+    }
+    
+    func getApiData(){
+        print("Were getting closer")
+        // use Alamofire to get data from api
+        Alamofire.request(url).responseJSON{
+            response in
+            if response.result.isSuccess{
+                // saves the data into a json object
+                let quoteJson : JSON =  JSON(response.result.value!)
+                // Passes quote data to handler function
+                self.updateQuoteLabels(json: quoteJson)
+            }else{
+                print("there was an error")
+            }
+        }
+        
+    }
+    
+    func  updateQuoteLabels(json: JSON){
+        // If the data has exists
+        if let quote = json["quote"].string {
+            quoteLabel.text = quote
+        } else {
+            quoteLabel.text = "There seems to be an error, try again later"
+        }
     }
     
 }
