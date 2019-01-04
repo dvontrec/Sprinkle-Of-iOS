@@ -45,11 +45,14 @@ class ViewController: UIViewController {
     
     func  updateQuoteLabels(json: JSON){
         // If the data has exists
-        if let quote = json["quote"].string {
+        if let quote = json["quote"].string{
             quoteLabel.text = quote
-            let song = json["song"].string
-            let artist = json["artist"].string
-            print("\(String(describing: song)) By : \(String(describing: artist))")
+//            print("\(song), by: \(artist)"
+        }else {
+            quoteLabel.text = "There seems to be an error, try again later"
+        }
+        if let artist = json["artist"].string{
+            print(artist)
         } else {
             quoteLabel.text = "There seems to be an error, try again later"
         }
